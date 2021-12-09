@@ -11,3 +11,4 @@ console.log ( 800/5);
 document.write({course: "javascript"});
 alert({course:"html"});
 console.log({course: "css"});
+

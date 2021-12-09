@@ -34,3 +34,7 @@ let first_name;
 let subject_name;
 let subjectName;
 
+
+let data="emma wats";
+const=harry;
+console.log(data);
