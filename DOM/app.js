@@ -1,31 +1,48 @@
-const heading = document.querySelector("h2");
-const btn = document.querySelector(".btn");
-const link = document.querySelector(".link");
+// CRUD
 
-btn.addEventListener("click", function(evt){
-    console.log(evt);
-    console.log(evt.currentTarget);
-    console.log(evt.currentTarget.textContent);
-    console.log(evt.currentTarget.classList);
-    console.log(evt.type);
-})
+// localStorage.setItem("fullname", "Emma Watson");
+// localStorage.setItem("fried", "harry");
+// localStorage.setItem("job", "actors");
+// localStorage.setItem("address", "england");
 
-heading.addEventListener("mouseenter", function(evt){
-    console.log(evt);
-    console.log(evt.currentTarget);
-    console.log(evt.currentTarget.classList);
-    let listOfClasses = evt.currentTarget.classList;
-    if(listOfClasses.contains("red")){
-        listOfClasses.remove("red")
-    }else{
-        listOfClasses.add("red")
-    }
-})
+
+// const newName = localStorage.getItem("fullname");
+// const newFriend = localStorage.getItem("fried");
+// console.log(newName, newFriend);
+
+// localStorage.setItem("fried", "harry potter");
+
+// localStorage.removeItem("fried");
+
+// localStorage.clear();
 
 
 
-link.addEventListener("click", function(e){
-    e.preventDefault();
-    console.log(e.target);
-    console.log(e.target.getAttribute("href"));
+// const friends = ["emma", "watson", "harry"];
+// console.log(typeof friends);
+// console.log(typeof JSON.stringify(friends));
+
+// localStorage.setItem("friendList", JSON.stringify(friends));
+
+// let values;
+// if(localStorage.getItem("friendList")){
+//     values = JSON.parse(localStorage.getItem("friendList"));
+// }else{
+//     values = [];
+// }
+// values.push("hello new value");
+// console.log(values);
+
+// localStorage.setItem("friendList", JSON.stringify(values));
+
+const firstName = document.querySelector("input[type='text']");
+const password = document.querySelector("input[type='password']");
+const submit = document.querySelector(".submit");
+
+submit.addEventListener("click", function(e){
+    console.log(firstName.value);
+    console.log(password.value);
+    localStorage.setItem("username", firstName.value);
+    localStorage.setItem("password", password.value);
+    localStorage.setItem("userLoggedStatus", true);
 })
